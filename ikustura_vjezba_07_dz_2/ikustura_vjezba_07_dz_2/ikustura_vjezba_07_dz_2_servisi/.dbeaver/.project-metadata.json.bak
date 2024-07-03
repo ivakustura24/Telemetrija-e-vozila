@@ -1,0 +1,1 @@
+{"resources":{"Scripts/Script-1.sql":{"default-datasource":"h2_server-18f78d40f4a-e6720e990fefbb8","default-schema":"PUBLIC"},"Scripts/Script.sql":{"default-schema":"PUBLIC","default-datasource":"h2_server-18f78d40f4a-e6720e990fefbb8","default-catalog":"PUBLIC"}}}

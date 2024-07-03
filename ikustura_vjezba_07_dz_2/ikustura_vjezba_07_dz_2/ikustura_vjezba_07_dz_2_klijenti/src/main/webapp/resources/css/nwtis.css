@@ -1,0 +1,108 @@
+.tablica {
+	
+}
+
+.neparniRedak {
+	background-color: #ffffff;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-bottom-style: solid;
+	border-top-style: solid;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-bottom-width: 1px;
+	border-top-width: 1px;
+	border-right-color: black;
+	border-left-color: black;
+	border-bottom-color: black;
+	border-top-color: black;
+}
+
+.parniRedak {
+	background-color: #e0e0e0;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-bottom-style: solid;
+	border-top-style: solid;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-bottom-width: 1px;
+	border-top-width: 1px;
+	border-right-color: black;
+	border-left-color: black;
+	border-bottom-color: black;
+	border-top-color: black;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f0f0f0;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	background-color: #733635;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	margin: 0;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 20px;
+	text-align: center;
+}
+
+li {
+	display: inline;
+	margin: 0 15px;
+}
+
+a {
+	text-decoration: none;
+	color: #733635;
+	font-weight: bold;
+}
+
+a:hover {
+	color: #915050;
+}
+table, th, td {
+  border: 1px solid;
+}       
+th {
+	text-align: center;
+	font-weight: bold;
+} 
+.desno {
+	text-align: right;
+}
+.form-container {
+    display: flex;
+    margin: 20px;
+}
+.form-container div{
+	margin: 20px;
+}
+
+form {
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+form h2 {
+    text-align: center;
+}
+
+table {
+    margin: auto;
+}
+p {
+	margin-left:50px;
+}

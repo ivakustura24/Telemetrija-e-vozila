@@ -1,0 +1,6 @@
+SELECT * FROM kazne;
+SELECT * FROM voznje;
+SELECT * FROM PRACENEVOZNJE p ;
+
+DELETE FROM kazne;
+DELETE FROM voznje;

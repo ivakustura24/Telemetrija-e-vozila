@@ -1,0 +1,7 @@
+CREATE ROLE aplikacija;
+
+GRANT aplikacija TO "nwtis_3";
+GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE korisnici TO "aplikacija";
+GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE grupe TO "aplikacija";
+GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE uloge TO "aplikacija";
+GRANT SELECT, UPDATE, INSERT, DELETE ON TABLE vozila TO "aplikacija";

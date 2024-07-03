@@ -1,0 +1,6 @@
+FROM maven:3.5.4-jdk-9 as build
+
+WORKDIR /helidon
+
+ADD ./ikustura_vjezba_08_dz_3_mikroservisi/pom.xml /helidon/
+RUN mvn clean package

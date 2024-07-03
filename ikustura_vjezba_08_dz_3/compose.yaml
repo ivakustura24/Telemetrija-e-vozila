@@ -1,0 +1,77 @@
+version: '3'
+
+name: nwtis_docker_compose
+networks:
+  nwtis:
+    external:
+      name: nwtis
+volumes:
+   h2nwtis:
+      external: true
+   nwtis_hsql_dz_2v:
+      external: true
+   
+services:
+   h2:
+      image: nwtis_h2_dz_2i
+      container_name: nwtis_h2_dz_2c
+      build:
+         dockerfile: ./Dockerfile.h2
+      volumes:
+      -  type: volume
+         source: h2nwtis
+         target: /opt/database
+         volume:
+            nocopy: true
+      restart: unless-stopped
+      networks:
+        nwtis:
+          ipv4_address: 20.24.5.4
+#   hsql:
+#      image: nwtis_hsql_dz_2i
+#      container_name: nwtis_hsql_dz_2c
+#      build:
+#         dockerfile: ./Dockerfile.hsql
+#      volumes:
+#      -  type: volume
+#         source: nwtis_hsql_dz_2v
+#         target: /opt/data
+#         volume:
+#            nocopy: true
+#      restart: unless-stopped
+#      networks:
+#        nwtis:
+#          ipv4_address: 20.24.5.3
+#   rest:
+#      image: nwtis_rest_dz_2i
+#      container_name: nwtis_rest_dz_2c
+#      build:
+#         dockerfile: ./Dockerfile.servisi
+#      restart: unless-stopped
+#      ports:
+#      - 9080:8080
+#      networks:
+#        nwtis:
+#          ipv4_address: 20.24.5.5
+   app:
+      image: nwtis_app_dz_2i
+      container_name: nwtis_app_dz_2c
+      build:
+         dockerfile: ./Dockerfile.app
+      restart: unless-stopped
+      networks:
+        nwtis:
+          ipv4_address: 20.24.5.2
+      depends_on:
+      - h2
+#   mikroservisi:
+#      image: nwtis_mikro_dz_2i
+#      container_name: nwtis_mikro_dz_2c
+#      build:
+#         dockerfile: ./Dockerfile.mikro
+#      restart: unless-stopped
+#      networks:
+#        nwtis:
+#          ipv4_address: 20.24.5.5
+#      depends_on:
+#      - h2
